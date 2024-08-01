@@ -1,0 +1,21 @@
+def find_first_occurrence(arr, element):
+    for index, value in enumerate(arr):
+        if value == element:
+            return index
+    return -1
+
+def main():
+    arr_input = input("Enter the elements of the array separated by spaces: ")
+    arr = list(map(int, arr_input.split()))
+    
+    element = int(input("Enter the element to find: "))
+    
+    index = find_first_occurrence(arr, element)
+    
+    if index != -1:
+        print(f"The first occurrence of the element {element} is at index {index}.")
+    else:
+        print(f"The element {element} is not found in the array.")
+
+if __name__ == "__main__":
+    main()
